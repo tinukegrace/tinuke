@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+.top-header{
+  background-color: black;
+  color: white;
+  padding: 17px 19px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 190px;
+  padding-right: 140px;
+}
+
+.top-header a {
+  color: white;
+  text-decoration: underline;
+  
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  border-bottom: 1px solid #ccc;
+  
+}
+.head2 {
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: #000;
+  margin-left: 90px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.search-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-cart input {
+  padding: 6px 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.main-container {
+  display: flex;
+  padding: 20px 30px;
+}
+
+aside {
+  width: 200px;
+  padding-right: 20px;
+  border-right: 1px solid #eee;
+    margin-left: 90px;
+}
+
+aside ul {
+  list-style: none;
+  font-size: 16px;
+  line-height: 3;
+}
+
+
+.hero {
+  flex: 1;
+  padding-left: 20px;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 5px;
+}
+
+  .sales img{
+          display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 40px;
+margin-left: 100px;
+
+/* position: absolute; */
+width: 1308px;
+height: 493px;
+left: 135px;
+top: 666px;
+      }
+        .view-all-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .view-all-btn {
+            background: #ff4444;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s;
+            
+        }
+
+        .view-all-btn:hover {
+            background: #e63939;
+        }
+
+         .flash-sales-section {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-left: 100px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .red-bar {
+            width: 8px;
+            height: 20px;
+            background: #ff4444;
+            border-radius: 2px;
+        }
+
+        .section-title {
+            color: #ff4444;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .flash-sales-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .flash-sales-header h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+        }
+   .X{
+/* position: absolute; */
+/* width: 1170px; */
+/* height: 500px; */
+left: 135px;
+top: 2300px;
+margin-left:100px ;
+  }
+   .container {
+            max-width: 1800px;
+            /* height:590px; */
+            margin: 0 ;
+            /* padding: 10px 24px 10px; */
+            /* background-color: #1e2329; */
+            
+        }
+
+
+  .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            justify-content: start;
+        }
+
+        .step {
+            /* background: #1e2329; */
+            border-radius: 12px;
+            padding: 20px 24px;
+            position: relative;
+            /* border: 1px solid #2b3139; */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .step:hover {
+            transform: translateY(-4px);
+            /* box-shadow: 0 8px 32px rgba(252, 213, 53, 0.1); */
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            margin:10px 0 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .step-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
