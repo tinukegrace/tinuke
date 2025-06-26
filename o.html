@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-commerce Homepage</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* Base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Top bar */
+.top-bar {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-weight: 200;
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+.shop-now {
+  text-decoration: underline;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  height: 70px;
+  padding: 20px 15%;
+  box-sizing: border-box;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 36px;
+  height: 100%;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links p {
+  cursor: pointer;
+}
+
+.nav-links .underline {
+  text-decoration: underline;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #777;
+  background-color: #eee;
+  padding: 4px 10px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Category & Hero */
+.category-hero {
+  display: flex;
+  padding: 20px 15%;
+  gap: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar {
+  width: 20%;
+  font-size: 14px;
+  line-height: 2;
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
+}
+
+.hero-image {
+  width: 73%;
+}
+
+/* Promo Sections */
+.promo-banner, .second-banner, .third-banner {
+  width: 100%;
+  padding-left: 15%;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+.wide-img {
+  width: 1200px;
+  height: 200px;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+}
+
+.view-products {
+  width: 200px;
+  height: 35px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Music highlight */
+.music-highlight {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  height: 62vh;
+  padding: 40px 15%;
+  background: #000;
+  box-sizing: border-box;
+}
+
+.music-text {
+  width: 50%;
+  color: white;
+  padding-right: 40px;
+}
+
+.music-text .category {
+  color: #00a86b;
+  margin-bottom: 10px;
+}
+
+.music-text .title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.color-dots div {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.music-image {
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.music-image img {
+  width: 500px;
+  position: relative;
+  top: 90px;
+}
+
+/* Feature Grid */
+.feature-grid {
+  width: 100%;
+  height: 71vh;
+  padding: 20px 15%;
+  box-sizing: border-box;
+}
+
+.feature-grid img {
+  height: 550px;
+  width: 100%;
+}
+
+/* New Arrivals */
+.new-arrivals {
+  width: 100%;
+  padding: 40px 15%;
+  box-sizing: border-box;
+}
+
+.title-bar {
+  display: flex;
+  align-items: center;
+}
+
+.title-bar .bar {
+  width: 10px;
+  height: 40px;
+  background: red;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.featured {
+  color: red;
+}
+
+.products-grid {
+  display: flex;
+  gap: 10%;
+  margin-top: 20px;
+}
+
+.large-product, .stacked-top, .mini-product {
+  background: black;
+  color: white;
+  position: relative;
+}
+
+.large-product img, .stacked-top img, .mini-product img {
+  margin: 10px;
+}
+
+.product-info {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  width: 60%;
+}
+
+.product-info p {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.product-info small {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.product-info a {
+  color: white;
+  text-decoration: underline;
+}
+
+.stacked-products {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  height: 420px;
+}
+
+.stacked-top {
+  height: 45%;
+}
+
+.stacked-bottom {
+  display: flex;
+  gap: 10%;
+  height: 45%;
+}
+
+.mini-product {
+  width: 45%;
+  position: relative;
+  padding: 10px;
+}
+
+/* Services */
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 5% 15%;
+  box-sizing: border-box;
+}
+
+.service-box {
+  text-align: center;
+  height: 200px;
+}
+
+.service-box .title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 40px 15%;
+  box-sizing: border-box;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-col p, .footer-col input {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+input[type="email"] {
+  width: 150px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="top-bar">
+      <p class="promo-text">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
+      <p class="shop-now">Shop Now!</p>
+      <div class="language">English <span class="icon">▼</span></div>
+    </div>
+
+    <div class="navbar">
+      <div class="navbar-content">
+        <h2 class="logo">Exclusive</h2>
+        <nav class="nav-links">
+          <p class="underline">Home</p>
+          <p>Contact</p>
+          <p>About</p>
+          <p>Sign up</p>
+        </nav>
+        <div class="nav-actions">
+          <button class="search-box">What are you looking for? 🔍</button>
+          <span class="icon">❤️</span>
+          <span class="icon">🛒</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="category-hero">
+      <aside class="sidebar">
+        <p>Women's Fashion ▶</p>
+        <p>Men's Fashion ▶</p>
+        <p>Electronics</p>
+        <p>Home & Lifestyle</p>
+        <p>Medicine</p>
+        <p>Sports and Outdoor</p>
+        <p>Baby's & Toys</p>
+        <p>Groceries and Pets</p>
+        <p>Health & Beauty</p>
+      </aside>
+      <div class="hero-image">
+        <img src="./image/Frame 560.png" alt="Hero Banner">
+      </div>
+    </section>
+
+    <section class="promo-banner">
+      <img src="./image/Frame 728.png" alt="Promo" class="wide-img">
+      <div class="center-button">
+        <button class="view-products">View all Products</button>
+      </div>
+    </section>
+
+    <section class="second-banner">
+      <img src="./image/Frame 730.png" alt="Promo 2" class="wide-img">
+    </section>
+
+    <section class="third-banner">
+      <img src="./image/Frame 732.png" alt="Promo 3">
+    </section>
+
+    <section class="music-highlight">
+      <div class="music-text">
+        <p class="category">Categories</p>
+        <h2 class="title">Enhance Your Music Experience</h2>
+        <div class="color-dots">
+          <div></div><div></div><div></div><div></div>
+        </div>
+      </div>
+      <div class="music-image">
+        <img src="./image/JBL_BOOMBOX_2_HERO_020_x1 (1) 1.png" alt="Speaker">
+      </div>
+    </section>
+
+    <section class="feature-grid">
+      <img src="./image/Frame 736.png" alt="Features">
+    </section>
+
+    <section class="new-arrivals">
+      <div class="title-bar">
+        <div class="bar"></div>
+        <p class="featured">Featured</p>
+      </div>
+      <h2>New Arrival</h2>
+      <div class="products-grid">
+        <div class="large-product">
+          <img src="./image/ps5-slim-goedkope-playstation_large 1.png" alt="PS5">
+          <div class="product-info">
+            <p>Play Station</p>
+            <small>Black and White version of the PS5 coming out on sale</small>
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+        <div class="stacked-products">
+          <div class="stacked-top">
+            <img src="./image/attractive-woman-wearing-hat-posing-black-background 1.png" alt="Women's Collection">
+            <div class="product-info">
+              <p>Women's Collections</p>
+              <small>Featured woman collections that give you another vibe</small>
+              <a href="#">Shop Now</a>
+            </div>
+          </div>
+          <div class="stacked-bottom">
+            <div class="mini-product">
+              <img src="./image/69-694768_amazon-echo-png-clipart-transparent-amazon-echo-png 1 (2).png" alt="Speaker">
+              <div class="product-info">
+                <p>Speakers</p>
+                <small>Amazon wireless speakers</small>
+                <a href="#">Shop Now</a>
+              </div>
+            </div>
+            <div class="mini-product">
+              <img src="./image/Frame 706.png" alt="Perfume">
+              <div class="product-info">
+                <p>Perfume</p>
+                <small>GUCCI INTENSE OUD EOP</small>
+                <a href="#">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="service-box">
+        <img src="./image/Services.png" alt="Delivery">
+        <p class="title">FREE AND FAST DELIVERY</p>
+        <p>Free delivery for all orders over $140</p>
+      </div>
+      <div class="service-box">
+        <img src="./image/Services (3).png" alt="Customer Service">
+        <p class="title">24/7 CUSTOMER SERVICE</p>
+        <p>Friendly 24/7 customer service</p>
+      </div>
+      <div class="service-box">
+        <img src="./image/Services (5).png" alt="Money Back">
+        <p class="title">MONEY BACK GUARANTEE</p>
+        <p>We return money within 30 days</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Exclusive</h3>
+          <p>Subscribe</p>
+          <p>Get 10% off your first order</p>
+          <input type="email" placeholder="Insert email" />
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh</p>
+          <p>exclusive@gmail.com</p>
+          <p>+88015-88888-9999</p>
+        </div>
+        <div class="footer-col">
+          <h3>Account</h3>
+          <p>My Account</p>
+          <p>Login / Register</p>
+          <p>Cart</p>
+          <p>Wishlist</p>
+          <p>Shop</p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Link</h3>
+          <p>Privacy Policy</p>
+          <p>Terms of Use</p>
+          <p>FAQ</p>
+          <p>Contact</p>
+        </div>
+        <div class="footer-col">
+          <h3>Download App</h3>
+          <p>Save $3 with App New User Only</p>
+          <img src="./image/Frame 719 (2).png" alt="App Image 1" />
+          <img src="./image/Frame 741.png" alt="App Image 2" />
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
